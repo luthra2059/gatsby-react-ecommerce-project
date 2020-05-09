@@ -17,17 +17,18 @@ export default class Cart extends Component {
                 <div className="container">
                     <Heading title="Products"/>
                     <div className="row">
+                    <div className="col-12 mx-auto">
                         {this.state.products.map(({node})=>{
                             return(
-                                <div key={node.id} className="col-11 col-md-6 d-flex mx-auto">
+                                <div key={node.id} className="col-11 col-md-6 d-flex mx-auto mb-5">
                                 <Img fixed={node.media.fixed}/>
                                     <div className="flex-row-1 px-3">
                                         <div className="d-flex justify-content-between">
                                             <h6 className="mb-0">{node.title}</h6>
-                                            <h6 className="mb-0 ml-5 text-success">{node.price}</h6>
+                                            <h6 className="mb-0 ml-5 text-success">$ {node.price}</h6>
                                         </div>
                                         <p className="text-muted">
-                                            <small>$ {node.description.description}</small>
+                                            <small>{node.description.description}</small>
                                         </p>
                                         <button 
                                         data-item-id={node.id}
@@ -42,7 +43,7 @@ export default class Cart extends Component {
                                     </div>
                                 </div>
                             )
-                        })}
+                        })}</div>
                     </div>
                 </div>
             </section>
