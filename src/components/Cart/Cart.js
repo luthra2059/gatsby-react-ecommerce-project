@@ -29,12 +29,14 @@ export default class Cart extends Component {
                                         <p className="text-muted">
                                             <small>$ {node.description.description}</small>
                                         </p>
-                                        <button className="btn btn-warning snipcart-add-item"
+                                        <button 
                                         data-item-id={node.id}
                                         data-item-name={node.title}
                                         data-item-price={node.price}
-                                        data-item-url="https://learncodeonline.in"
+                                        data-item-url="shubhamluthraecom.netlify.com/"
                                         data-item-image={node.media.fixed.src}
+                                        className="btn btn-warning snipcart-add-item"
+                                        
                                         
                                         >Buy Now</button>
                                     </div>
